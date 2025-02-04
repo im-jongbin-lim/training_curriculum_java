@@ -65,8 +65,7 @@ public class CalendarsController {
           }
       }
 
-      int wdayNum = currentDate.getDayOfWeek().getValue();
-      if (wdayNum >= 7 ) wdayNum -= 7;
+      int wdayNum = (todaysDate.getDayOfWeek().getValue() + x) % 7;
 
       day_map.put("month", currentDate.getMonthValue());
       day_map.put("date", currentDate.getDayOfMonth());
